@@ -211,7 +211,7 @@ void EXTI3_IRQHandler(void)
   /* USER CODE END EXTI3_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_3);
   /* USER CODE BEGIN EXTI3_IRQn 1 */
-  wiegandSaveBit(0);
+  WiegandSaveBit(1);
   /* USER CODE END EXTI3_IRQn 1 */
 }
 
@@ -225,7 +225,7 @@ void EXTI4_IRQHandler(void)
   /* USER CODE END EXTI4_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_4);
   /* USER CODE BEGIN EXTI4_IRQn 1 */
-  wiegandSaveBit(1);
+  WiegandSaveBit(0);
   /* USER CODE END EXTI4_IRQn 1 */
 }
 
@@ -249,11 +249,11 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
 void TIM1_UP_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM1_UP_IRQn 0 */
-	wiegandTimeout();
+
   /* USER CODE END TIM1_UP_IRQn 0 */
   HAL_TIM_IRQHandler(&htim1);
   /* USER CODE BEGIN TIM1_UP_IRQn 1 */
-
+  WiegandTimeout();
   /* USER CODE END TIM1_UP_IRQn 1 */
 }
 
