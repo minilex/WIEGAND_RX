@@ -1,0 +1,3 @@
+[submodule "Drivers/WIEGAND"]
+	path = Drivers/WIEGAND
+	url = https://github.com/minilex/WIEGAND
